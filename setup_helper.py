@@ -39,7 +39,8 @@ def make_shortcut(target_path, shortcut_path):
     shortcut.WindowStyle = 7
     shortcut.save() 
     
-if __name__ == "__main__":
+if __name__ == "__main__":    
+    import init
     check_shortcut_dir()
     make_shortcut(file_tuple[0][1], file_tuple[0][2])
     make_shortcut(file_tuple[1][1], file_tuple[1][2])
