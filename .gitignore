@@ -1,0 +1,9 @@
+GUI/test.py
+GUI/__pycache__/
+loginSettings.ini
+ilearning/__pycache__/
+*.lnk
+pyinstaller/
+build/
+dist/
+
