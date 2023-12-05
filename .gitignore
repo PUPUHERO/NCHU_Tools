@@ -1,9 +1,8 @@
-GUI/test.py
-GUI/__pycache__/
-loginSettings.ini
-ilearning/__pycache__/
-*.lnk
+.env/
+__pycache__/
 pyinstaller/
 build/
 dist/
-
+GUI/test.py
+loginSettings.ini
+*.lnk
