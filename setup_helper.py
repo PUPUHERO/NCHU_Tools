@@ -12,6 +12,11 @@ step3: 將捷徑放入桌面
 
 import os
 import sys
+
+# run pip install requirements.txt
+import pip
+pip.main(["install", "-r", "requirements.txt"])
+
 import pythoncom
 from win32com.client import Dispatch
 
