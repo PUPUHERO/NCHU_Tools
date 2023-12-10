@@ -5,14 +5,15 @@
 這是一個為了方便興大學生使用而開發的工具，目前有以下功能：
 - 自動填寫ilearning驗證碼
 - 自動填寫興大入口網站驗證碼
-- 圖書館自動登入(已棄用)
+- ~~圖書館自動登入~~(已棄用)
 
 ## 前置作業
 
 ### (前置)環境設定
 
-必須先安裝python3，並且安裝以下套件：
-...
+必須先安裝python3，並且安裝以下套件：[requirements.txt](requirements.txt)
+
+    pip3 install -r requirements.txt
 
 ### (前置)帳密設定
 
