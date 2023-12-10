@@ -18,9 +18,9 @@
 
 需先在當前project目錄下建立loginSettings.ini並設定帳密，格式如下：
 
-[loginInfo]
-account = 411006xxxx
-password = xxxxxxxxxx
+    [loginInfo]
+    account = 411006xxxx
+    password = xxxxxxxxxx
 
 ## 使用方法
 
