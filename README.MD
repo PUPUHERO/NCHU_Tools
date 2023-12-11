@@ -27,7 +27,7 @@
 
 ### 快捷操作
 
-執行`setup_helper.py`，會在shortcut資料夾中建立捷徑，可將其釘選到工作列，方便使用。
+執行`setup_helper.py`，會安裝requirements.txt中所有套件並且在shortcut資料夾中建立捷徑，可將其釘選到工作列，方便使用。
 
 ### GUI介面
 
