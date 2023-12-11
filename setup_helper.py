@@ -20,6 +20,8 @@ pip.main(["install", "-r", "requirements.txt"])
 import pythoncom
 from win32com.client import Dispatch
 
+from auth.init import check_loginSettings
+
 file_tuple = (
     ("ilearning", "ilearning/SeleLogin.py", "shortcut/ilearningLogin.lnk"),
     ("NCHUPortal", "NCHUPortal/login.py", "shortcut/NUCHLogin.lnk")
@@ -45,7 +47,7 @@ def make_shortcut(target_path, shortcut_path):
     shortcut.save() 
     
 if __name__ == "__main__":    
-    import init
+    check_loginSettings()
     check_shortcut_dir()
     make_shortcut(file_tuple[0][1], file_tuple[0][2])
     make_shortcut(file_tuple[1][1], file_tuple[1][2])
