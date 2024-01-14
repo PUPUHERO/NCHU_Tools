@@ -17,7 +17,7 @@ def main():
     # 避免建立cmd小黑框
     chrome_service.creation_flags = CREATE_NO_WINDOW
 
-    URL = "https://idp.nchu.edu.tw/nidp/idff/sso?id=4&sid=1&option=credential&sid=1&target=https%3A%2F%2Fportal.nchu.edu.tw%2Fportal"
+    URL = "https://idp.nchu.edu.tw"
     user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 
     # 設定webdriver選項
@@ -30,6 +30,7 @@ def main():
 
     # 建立webdriver
     browser = webdriver.Chrome(service=chrome_service, options=options)
+    browser.implicitly_wait(10)
     browser.get(url=URL)
 
     """載入資料"""
