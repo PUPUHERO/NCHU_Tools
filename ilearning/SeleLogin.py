@@ -1,16 +1,11 @@
 import base64
 import os
-import sys
-import time
 import configparser
 from number_recognizer import NumberRecognizer
 
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from subprocess import CREATE_NO_WINDOW
 from selenium.webdriver.common.by import By
 import selenium.common.exceptions
-from webdriver_manager.chrome import ChromeDriverManager
 
 def loginAndFillCapt():
     #使函數結束後該變數(瀏覽器)不要被關閉
@@ -18,11 +13,8 @@ def loginAndFillCapt():
         options = webdriver.ChromeOptions()
         options.add_argument("--start-maximized")
         options.add_experimental_option("detach", True)
-        chrome_service = Service(ChromeDriverManager().install())
-        chrome_service.creationflags = CREATE_NO_WINDOW
         #if selenium >= 4.6.0
-        chrome_service.creation_flags = CREATE_NO_WINDOW
-        browser = webdriver.Chrome(service=chrome_service, options=options)
+        browser = webdriver.Chrome(options=options)
 
         browser.get("https://lms2020.nchu.edu.tw/")
 

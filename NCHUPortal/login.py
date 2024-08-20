@@ -19,6 +19,9 @@ def main():
     options.add_experimental_option("detach", True)
 
     # 建立webdriver
+    # No need to specify the path of the chromedriver executable file after Selenium 4.6.0
+    # https://stackoverflow.com/questions/76461596/unable-to-use-selenium-webdriver-getting-two-exceptions/76463081#76463081
+    
     browser = webdriver.Chrome(options=options)
     browser.implicitly_wait(10)
     browser.get(url=URL)
