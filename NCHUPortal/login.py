@@ -1,22 +1,12 @@
 """自動登入NCHU portal"""
-import json
 import os
 import configparser
-from subprocess import CREATE_NO_WINDOW
 
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
 
 """載入套件"""
 def main():
-    # 自動安裝webdriver
-    chrome_service = Service(ChromeDriverManager().install())
-    # 避免建立cmd小黑框
-    chrome_service.creation_flags = CREATE_NO_WINDOW
-
     URL = "https://idp.nchu.edu.tw/nidp/idff/sso?id=4&sid=1&option=credential&sid=1&target=https%3A%2F%2Fportal.nchu.edu.tw%2Fportal"
     user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 
@@ -29,7 +19,7 @@ def main():
     options.add_experimental_option("detach", True)
 
     # 建立webdriver
-    browser = webdriver.Chrome(service=chrome_service, options=options)
+    browser = webdriver.Chrome(options=options)
     browser.implicitly_wait(10)
     browser.get(url=URL)
 
