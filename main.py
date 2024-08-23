@@ -11,8 +11,11 @@ from Library.login import main as Library_main
 
 if __name__ == '__main__':
     # 定義命令列參數
-    parser = argparse.ArgumentParser(description='0 for ilearning, 1 for NCHUPortal, 2 for NCHU library')
-    parser.add_argument('--service', type=str, help='0 for ilearning, 1 for NCHUPortal, 2 for NCHU library')
+    parser = argparse.ArgumentParser(
+        description='NCHU Auto Login Tools',
+        formatter_class=argparse.RawTextHelpFormatter
+    )
+    parser.add_argument('-s', '--service', type=str, metavar='', help='0 for ilearning, 1 for NCHUPortal, 2 for NCHU library')
     
     # 解析參數
     args = parser.parse_args()
