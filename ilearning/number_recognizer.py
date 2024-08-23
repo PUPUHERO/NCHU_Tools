@@ -12,7 +12,10 @@ import cv2 as cv
 import numpy as np
 from imutils import contours #Fix:module 'myutils' has no attribute 'sort_contours'
 
-from model import img
+try:
+    from model import img
+except ModuleNotFoundError:
+    from .model import img
 
 # =============== for pyinstaller ===============
 # determine if application is a script file or frozen exe

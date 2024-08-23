@@ -1,7 +1,11 @@
 import base64
 import os
 import configparser
-from number_recognizer import NumberRecognizer
+
+try:
+    from number_recognizer import NumberRecognizer
+except ModuleNotFoundError:
+    from .number_recognizer import NumberRecognizer
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
