@@ -6,3 +6,6 @@ dist/
 GUI/test.py
 loginSettings.ini
 *.lnk
+
+main.spec
+main.exe
